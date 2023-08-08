@@ -1,4 +1,4 @@
 
 nom = "BLANC Jorry"
 age = 23
-print("Bonjour ",nom," ou gen", age," ans")
+print("Bonjor ",nom," ou gen", age," ane")
