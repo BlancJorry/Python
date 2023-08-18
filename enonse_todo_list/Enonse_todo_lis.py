@@ -45,7 +45,7 @@ def save_tasks(l):
     non_fich = 'task.txt'
     non_comp = os.path.join(chemin_dos, non_fich)
     try:
-        fich = open(non_comp,'wb')
+        fich = open(non_comp,'rb')
         for t in Todo_list:
             pickle.dump(l,fich)
             l= pickle.load(fich)
@@ -66,16 +66,21 @@ def meni():
         print('4.Anregistre epi femen')
         chwa = int(input("fe yon chwa :"))
 
-        if chwa == 1:
-            add_task()
-        if chwa == 2:
-            display_tasks(Todo_list)
-        if chwa == 3:
-            mark_task_done()
-        if chwa == 4:
-            save_tasks(Todo_list)
-            print('eleman ou yo anregistre nan fichye a !')
-        if chwa == 0:
-            print('program nan femen mesi')
-            break
+       try:
+            chwa = int(input("fe yon chwa :"))
+
+            if chwa == 1:
+                add_task()
+            if chwa == 2:
+                display_tasks(Todo_list)
+            if chwa == 3:
+                mark_task_done()
+            if chwa == 4:
+                save_tasks(Todo_list)
+                print('eleman ou yo anregistre nan fichye a !')
+            if chwa == 0:
+                print('program nan femen mesi')
+                break
+        except ValueError:
+            print('chwa ou a pa nan meni an')
 meni()
