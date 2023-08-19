@@ -6,7 +6,7 @@ def pg (l):
     for i in l:
        if i > t:
            t=i
-    print('pigran c',t)    
+    print('pi gran c',t)    
 pg(lis)    
 
 
@@ -15,5 +15,5 @@ def pt (l):
     for i in l:
        if i < t:
            t=i
-    print('pigran c',t) 
+    print('pi piti a c',t) 
 pt(lis)    
