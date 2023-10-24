@@ -1,0 +1,23 @@
+mport time 
+import random
+
+ale = ["|","__","+"]
+Lconsole = 30
+
+while True:
+    choix = random.choice(ale)
+
+    obj = [" " for _ in range(Lconsole)]
+
+    aff = " "*Lconsole
+    #fe chwa de on position nan konsol la 
+    pos = random.randint(0, Lconsole- 1)
+    
+    while pos<Lconsole:
+        print("\n"*50)
+        aff = aff[:pos] + choix + aff[pos + 1:]
+
+        print(aff)
+        pos +=1
+
+        time.sleep(1)
